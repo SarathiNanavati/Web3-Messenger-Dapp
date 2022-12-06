@@ -1,9 +1,11 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { alchemyProvider } from "wagmi/providers/alchemy";
 import { MetaMaskConnector } from "wagmi/connectors/metaMask";
 import { configureChains, createClient, WagmiConfig, chain } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
+import Layout from "../components/Layout";
+import { Provider as ReduxStoreProvider } from "react-redux";
+import { store } from "../store/store";
 
 ///////////////////////Wagmi Configuration///////////////////////////////////////////////
 //chains
@@ -14,7 +16,7 @@ const { chains, provider } = configureChains(
     publicProvider(),
   ]
 );
-
+// ;
 // client
 const wagmiClient = createClient({
   autoConnect: true,
@@ -25,9 +27,13 @@ const wagmiClient = createClient({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <WagmiConfig client={wagmiClient}>
-        <Component {...pageProps} />;
-      </WagmiConfig>
+      <ReduxStoreProvider store={store}>
+        <WagmiConfig client={wagmiClient}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </WagmiConfig>
+      </ReduxStoreProvider>
     </>
   );
 }
