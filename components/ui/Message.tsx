@@ -15,7 +15,7 @@ const Message: React.FC<MessageProps> = ({ message }) => {
 
   return (
     <div className={`flex items-end space-x-2 relative ${isUserAddress && "justify-end"}`}>
-      <div className={`relative h-8 w-8 ${isUserAddress && "order-last ml-2"}`}>
+      <div className={`relative h-8 w-8 ${isUserAddress && "order-last mr-8"}`}>
         <Avatar address={message.userAddress!} />
       </div>
       <div

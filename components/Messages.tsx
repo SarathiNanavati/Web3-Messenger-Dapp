@@ -9,7 +9,10 @@ const Messages = () => {
 
   return (
     <>
-      <div className='space-y-10 p-4'>
+      <div
+        className='h-4/6 space-y-10 p-4 flex flex-col overflow-y-scroll overflow-x-hidden
+          scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-yellow-800
+        '>
         {messages.map((message, index) => {
           return <Message key={index} message={message} />;
         })}

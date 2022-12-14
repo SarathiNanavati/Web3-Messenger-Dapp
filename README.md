@@ -1,1 +1,1 @@
-# Next.js + Tailwind CSS Web3 Messanger Dapp
+# Next.js + Tailwind CSS + Redux Web3 Messanger Dapp

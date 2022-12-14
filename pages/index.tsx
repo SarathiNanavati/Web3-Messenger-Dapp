@@ -4,7 +4,7 @@ import Login from "../components/Login";
 
 const Home: NextPage = () => {
   return (
-    <div className='h-screen overflow-y-scroll'>
+    <div className='h-screen '>
       <Head>
         <title>Web3 Messenger Dapp</title>
         <link rel='icon' href='/favicon.ico' />

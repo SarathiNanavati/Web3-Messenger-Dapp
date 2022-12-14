@@ -28,16 +28,23 @@ const NavBar = () => {
 
   return (
     <>
-      <div className='bg-gray-900 z-10 flex items-center w-full h-40 border-b-4 border-yellow-500'>
-        <div className='flex-1 flex flex-row h-4/6 w-full items-center justify-between ml-20'>
-          <div className='text-yellow-500 text-4xl py-3 font-bold border-y-4 border-yellow-500'>
+      <div className='bg-gray-900 z-10 flex items-center w-full h-1/6 border-b-4 border-yellow-500'>
+        <div className='flex flex-row w-screen items-center justify-around mx-2 h-screen'>
+          <div
+            className='text-yellow-500 text-lg py-3 font-bold border-y-4 border-yellow-500            
+            sm:text-xl
+            md:text-2xl
+            lg:text-2xl
+            '>
             Web3 Messanger Dapp
           </div>
 
-          <div className='bg-yellow-600 rounded-lg px-10 py-2 mr-20 font-bold hover:bg-yellow-500 flex w-4/12 items-center '>
+          <div
+            className='bg-yellow-600 rounded-lg px-2 py-2 font-bold hover:bg-yellow-500 flex space-x-0 space-y-0 items-center justify-center
+            md:flex:row'>
             {isConnected && <Avatar address={address!} />}
             <button
-              className='flex'
+              className='flex flex-col space-x-0 space-y-0 md:flex-row'
               disabled={isConnected}
               key={connector.id}
               onClick={() => handleConnect(connector)}>

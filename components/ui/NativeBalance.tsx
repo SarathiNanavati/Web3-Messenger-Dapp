@@ -6,9 +6,12 @@ const NativeBalance = () => {
   const { data, isError, isLoading } = useBalance({ address });
 
   return (
-    <div className='bg-gray-700/[.2] p-2 m-1 rounded-xl'>{`${data?.formatted.substr(0, 5)} ${
-      data?.symbol
-    }`}</div>
+    <div
+      className='bg-gray-700/[.2] p-2 rounded-xl text-xs hidden
+    md:block'>{`${data?.formatted.substr(
+      0,
+      5
+    )} ${data?.symbol}`}</div>
   );
 };
 

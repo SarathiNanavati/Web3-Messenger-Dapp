@@ -8,7 +8,7 @@ type LayoutProps = {
 const Layout: React.FC<LayoutProps> = ({ children }): JSX.Element => {
   return (
     <>
-      <div className='max-w-screen-2xl mx-auto h-screen bg-gradient-to-br from-black to-gray-800 overflow-hidden'>
+      <div className='max-w-screen-xl mx-auto h-screen bg-gradient-to-br from-black to-gray-800 overflow-hidden'>
         <NavBar />
         <div className='text-white text-xl'>{children}</div>
       </div>
